@@ -69,8 +69,8 @@ function App() {
             {/* <Route index element={<Home />} /> */}
             <Route path="/" element={<Callback />} />
             <Route path="/home" element={<Home />} />
-            <Route exact path='/myprofile/projects' element={<ProjectPage projects={projects}/>}></Route>
-            <Route exact path='/myprofile/courses' element={<CoursePage courses={courses}/>}></Route>
+            <Route exact path='/projects' element={<ProjectPage projects={projects}/>}></Route>
+            <Route exact path='/courses' element={<CoursePage courses={courses}/>}></Route>
             <Route
               exact
               path="/ProjectDisplay"

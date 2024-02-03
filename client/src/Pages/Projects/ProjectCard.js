@@ -26,6 +26,7 @@ export default function ProjectCard({project}) {
           <p><b>Total reviews</b>  {project.reviews}</p>
           <div variant="body2" className='projectTechused' color="text.secondary">
             {/* {project.techstack.map((tech)=><p key={Math.random()}>&#x2022;  {tech}</p>)} */}
+            {/* {project.docref.id} */}
           </div>
           
         </CardContent>
