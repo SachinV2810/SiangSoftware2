@@ -14,21 +14,6 @@ import CoursePage from './Pages/courses/CoursesPage';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import ProjectDisplay from "./Components/ProjectDisplay/ProjectDisplay";
-
-const project = {
-  Name: "Web development",
-  Type: "Personal project",
-  Images: ["imag1 link", "image2 link"],
-  Description:
-    "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.",
-  TeckStack: ["html", "css", "java"],
-  Status: 0,
-  Reviews: ["good", "bad"],
-  SkillsReq: ["django", "react"],
-};
-  let Courses=[{id:1,courseName:"C++ full course",from:"coding Ninja",link:"www.google.com",rating:4,online:true},
-    {id:2,courseName:"Web dev full course",from:"coding Ninja",link:"www.google.com",rating:5,online:true},
-    {id:3,courseName:"Web dev full cours",from:"coding Ninja",link:"www.google.com",rating:4.3,online:false} ]
 function App() {
   const [projects, setProjects] = React.useState([]);
   const [courses, setCourses] = React.useState([]);
@@ -74,7 +59,7 @@ function App() {
             <Route
               exact
               path="/ProjectDisplay"
-              element={<ProjectDisplay project={project} />}
+              element={<ProjectDisplay/>}
             ></Route>
             {/* <Route path="about" element={<About />} /> */}
           </Routes>

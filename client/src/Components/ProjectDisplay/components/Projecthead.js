@@ -10,8 +10,8 @@ const Projecthead = (project) => {
   return (
     <div class="projectHead">
       <div class="projectAuthor">
-        <span class="projectName"> {project.Name}</span>
-        <span class="projectType"> {"- " + project.Type}</span>
+        <span class="projectName"> {project.name}</span>
+        <span class="projectType"> {"- " + project.projecttype}</span>
       </div>
       <div class="projectStatus">{statusMessage}</div>
     </div>

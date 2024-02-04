@@ -19,7 +19,7 @@ export default function Login({course}){
             <div class="background-image"></div>
  
             <button class="microsoft-button">
-            <img src={ require('/Users/maneeshskolekar/SiangSoftware/client/src/Pages/landing/Microsoft_logo.png') } />     
+            <img src={ require('./Microsoft_logo.png') } />     
 Sign in with microsoft
             </button>
 

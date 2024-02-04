@@ -8,11 +8,15 @@ const usersCollection = collection(db, 'courses');
 router.post('/addcourse', async(req, res) => {
     const data = req.body;
     const docRef = await addDoc(usersCollection, dataFromFrontend);
+    const data_id = {
+        id: docRef.id
+    }
 })
 router.post('/courses', async(req, res) => {
     const dataArray = [];
     const alldocs = await getDocs(usersCollection);
     alldocs.forEach((doc) => {
+
         dataArray.push(doc.data());
     });
     console.log(dataArray);

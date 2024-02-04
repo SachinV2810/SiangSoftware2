@@ -1,6 +1,10 @@
 import "./ProjectAccordian.css";
 
-const ProjectAccordian = (project) => {
+const ProjectAccordian = (myproject) => {
+  let project = JSON.parse(JSON.stringify(myproject));
+  if (!project.techstacks) project.techstacks = [""];
+  if(!project.SkillsReq) project.SkillsReq=[""];
+  console.log(project);
   return (
     <ul class="accordian">
       <li class="accordianHeading">
@@ -10,7 +14,7 @@ const ProjectAccordian = (project) => {
           Description
         </label>
         <div class="content">
-          <p>{project.Description}</p>
+          <p>{project.description}</p>
         </div>
       </li>
       <li class="accordianHeading">
@@ -21,7 +25,7 @@ const ProjectAccordian = (project) => {
         </label>
         <div class="content">
           <ul>
-            {project.TeckStack.map((tech) => (
+            {project.techstacks.map((tech) => (
               <li>{tech}</li>
             ))}
           </ul>
@@ -34,11 +38,7 @@ const ProjectAccordian = (project) => {
           Reviews
         </label>
         <div class="content">
-          <ul>
-            {project.Reviews.map((review) => (
-              <li>{review}</li>
-            ))}
-          </ul>
+          {project.reviews}
         </div>
       </li>
 
